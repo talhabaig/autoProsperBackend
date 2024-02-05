@@ -1,0 +1,42 @@
+
+{
+	"compilerOptions": {
+		"strict": false,
+    	"outDir": "./dist",
+    	"declaration": true,
+    	"declarationDir": "./dist/types", 
+		"isolatedModules": false,
+		"removeComments": false,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"strictNullChecks": true,
+		"noUnusedLocals": true,
+		"noImplicitThis": true,
+		"noUnusedParameters": true,
+		"importHelpers": true,
+		"noEmitHelpers": true,
+		"newLine": "lf",
+		"resolveJsonModule": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"pretty": true,  
+		"target": "es2015",
+		"allowJs": true,
+	    "skipLibCheck": true // Skip type checking of declaration files, can help with third-party typings
+	},
+	"formatCodeOptions": {
+		"indentSize": 2,
+		"tabSize": 2
+	},
+	"include": [ 
+		"**/*.ts",
+		"config/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist/"
+	]
+}

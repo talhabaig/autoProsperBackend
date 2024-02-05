@@ -1,0 +1,31 @@
+# Database Configuration
+
+DB_USER=postgres
+DB_PASSWORD=123
+DB_NAME=autoprosper
+DB_HOST=localhost
+DB_LOCALHOST=true
+
+# Server Configuration
+SERVER_PORT=9000
+SERVER_API_UUID=0eb14adc-a16e-400c-8f55-7d6c016bb36d
+TOKEN_EXPIRATION_DAYS=1
+TOKEN_EXPIRATION_HOURS=8
+TOKEN_EXPIRATION_MINUTES=0
+TOKEN_EXPIRATION_SECONDS=0
+
+# Bcrypt Configuration
+BCRYPT_SALT_ROUNDS=10
+
+# Email Configuration
+EMAIL_PRIMARY_TOKEN=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+EMAIL_PRIMARY_FROM=xyz@email.com
+EMAIL_SUPPORT_ADDRESS=abc@email.com
+
+# Other Configuration
+RANDOM_PASSWORD_LENGTH=10
+
+# Logs Configuration
+LOGS_MAX_FILES=5
+LOGS_MAX_FILE_SIZE=20971520
+LOGS_ZIP_OLD=true
