@@ -4,7 +4,7 @@
  * @application express-typescript-postgres
  *     @summary Server-specific configuration settings for the APIs.
  * @description This is an example of the config file which holds all the confidential credentials.
- */0
+ */
 
 interface dbClient {
 	user: string
@@ -12,7 +12,6 @@ interface dbClient {
 	database: string
 	host: string
 	port: number
-	
 	max: number
 	idleTimeoutMillis: number
   }
@@ -94,4 +93,3 @@ interface dbClient {
 	maxFileSize: 20971520, // 20 MB
 	zipOldLogs: true,
   }
-  
