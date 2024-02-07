@@ -54,10 +54,10 @@ async function main() {
 
   dotenv.config();
  
-  config.dbObj.database = process.env.DB_Name as string
-  config.dbObj.user = process.env.DB_USER as string
-  config.dbObj.password = process.env.DB_PASSWORD as string
-  config.dbObj.host = process.env.DB_HOST as string
+  config.dbObj.database = process.env.DB_NAME?.trim() ?? config.dbObj.database; 
+  config.dbObj.user = process.env.DB_USER?.trim() ?? config.dbObj.user
+  config.dbObj.password = process.env.DB_PASSWORD?.trim() ?? config.dbObj.password
+  config.dbObj.host = process.env.DB_HOST?.trim() ?? config.dbObj.host
 
   const pool = new PGPool(config.dbObj)
   app.set('dbPool', pool)
