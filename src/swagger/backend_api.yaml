@@ -4,7 +4,7 @@ info:
   title: "AutoProsper APIs"
   description: "AutoProsper API documentation to create a CRUD style API in NodeJs using TypeScript"
 servers:
-  - url: "http://34.205.68.33:9000/api"
+  - url: "http://18.234.141.254:9000/api"
     description: "PROD server"
   - url: "http://localhost:9000"
     description: "LOCAL 9000"

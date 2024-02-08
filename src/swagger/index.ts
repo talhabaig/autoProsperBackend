@@ -8,7 +8,7 @@ export default {
     },
     servers: [
       {
-        url: 'http://34.205.68.33:9000/api',
+        url: 'http://18.234.141.254:9000/api',
         description: 'PROD server',
       },
       {
