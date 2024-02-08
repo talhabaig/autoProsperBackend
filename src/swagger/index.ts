@@ -8,7 +8,7 @@ export default {
     },
     servers: [
       {
-        url: 'http://18.234.141.254:9000',
+        url: 'http://ec2-18-234-141-254.compute-1.amazonaws.com:9000',
         description: 'PROD server',
       },
       {
