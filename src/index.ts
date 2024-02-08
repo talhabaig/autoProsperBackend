@@ -80,7 +80,7 @@ async function main() {
   // create server
   const server = http.createServer(app)
   const port = config.server.port || 5002
-  server.listen(port, (_error: any) => {
+  server.listen(port, '0.0.0.0', (_error: any) => {
     if (_error) {
       return console.error('Error: ', _error)
     }
