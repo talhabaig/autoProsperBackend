@@ -106,9 +106,6 @@ cp config/index.sample.ts config/index.ts;
  DB_NAME: 'db_dbname',
  DB_HOST: 'db_host',
  DB_LOCALHOST: true/false,
-  
-# Goto the source code
-cd src;
 
 # Install NPM dependencies
 npm install;
@@ -174,3 +171,47 @@ npm run dev;
 
 - Try accessing the http://`<HOST>:<PORT>`/swagger
 - Note: Remember to replace the "HOST" & "IP" with your HOST & PORT number.
+
+# Deploying the Project on AWS EC2
+Follow these steps to deploy the project on an AWS EC2 instance:
+
+1. Launch an EC2 Instance:
+ - Log in to the AWS Management Console.
+ - Navigate to the EC2 service.
+ - Launch a new EC2 instance based on your requirements, ensuring it has the necessary specifications for running the project.
+
+2. Connect to the EC2 Instance:
+ - Once the instance is running, connect to it using SSH. Use the public IP address and the key pair associated with your instance.
+```sh 
+ssh -i [your-key-pair.pem] ec2-user@[your-ec2-instance-ip]
+```
+
+3. Clone the Repository:
+ - Inside the EC2 instance, clone the project repository.
+```sh
+git clone [repository_url]
+cd [project_directory]
+```
+
+4. Update Environment Variables:
+ - Open the .env file and update the database details and any other necessary configurations.
+```sh
+nano .env
+```
+
+5. Install Dependencies:
+- Install the project dependencies using npm.
+```sh
+npm install
+```
+
+6. Start the Application with PM2:
+- Install PM2 globally if not already installed.
+```sh
+npm install -g pm2
+```
+
+7. Start the application using PM2.
+```sh
+pm2 start "npm run dev"
+```
