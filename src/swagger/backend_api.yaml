@@ -114,6 +114,15 @@ components:
           type: "boolean"
         is_operator_alert_monitor:
           type: "boolean"
+    enum:
+      type: "array"
+      items:
+        type: "object"
+        properties:
+          value:
+            type: "number"
+          displayName:
+            type: "string"
     roles:
       type: "array"
       items:
@@ -413,6 +422,126 @@ paths:
                                 type: "boolean"
                               is_operator_alert_monitor:
                                 type: "boolean"
+  /v0/enums/essentials:
+    get:
+      tags:
+        - "Enums"
+      summary: "Get Enum for CarEssentialCriteria"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "array"
+                    items:
+                      type: "object"
+                      properties:
+                        value:
+                          type: "number"
+                        displayName:
+                          type: "string"
+  /v0/enums/prefferedcarbrand:
+    get:
+      tags:
+        - "Enums"
+      summary: "Get Enum for PrefferedCarBrand"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "array"
+                    items:
+                      type: "object"
+                      properties:
+                        value:
+                          type: "number"
+                        displayName:
+                          type: "string"
+  /v0/enums/prefferedseats:
+    get:
+      tags:
+        - "Enums"
+      summary: "Get Enum for PrefferedSeats"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "array"
+                    items:
+                      type: "object"
+                      properties:
+                        value:
+                          type: "number"
+                        displayName:
+                          type: "string"
+  /v0/enums/prefferedvehicle:
+    get:
+      tags:
+        - "Enums"
+      summary: "Get Enum for PrefferedVehicle"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "array"
+                    items:
+                      type: "object"
+                      properties:
+                        value:
+                          type: "number"
+                        displayName:
+                          type: "string"
+  /v0/enums/prefferedridepower:
+    get:
+      tags:
+        - "Enums"
+      summary: "Get Enum for PrefferedRidePower"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "array"
+                    items:
+                      type: "object"
+                      properties:
+                        value:
+                          type: "number"
+                        displayName:
+                          type: "string"
   /v0/user/roles:
     get:
       tags:

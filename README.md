@@ -211,7 +211,7 @@ npm install
 npm install -g pm2
 ```
 
-7. Start the application using PM2.
+7.  Start the application using PM2.
 ```sh
 pm2 start "npm run dev"
 ```
