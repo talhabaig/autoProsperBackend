@@ -10,7 +10,6 @@ CREATE TABLE public.users(
 	username character varying NOT NULL,
 	salt character varying NOT NULL,
 	hashpass character varying NOT NULL,
-	email character varying NULL,
 	CONSTRAINT pk_users PRIMARY KEY (id),
 	CONSTRAINT ak_user_username UNIQUE (username) 
 	)

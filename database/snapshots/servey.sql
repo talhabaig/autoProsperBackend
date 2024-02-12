@@ -7,8 +7,6 @@ CREATE TABLE public.servey(
 	deleted_by integer NULL,
 	deleted_date timestamp without time zone NULL,
 	id integer NOT NULL DEFAULT nextval('servey_id_seq'::regclass),
-	sessionid character varying NOT NULL,
-	label character varying NOT NULL,
 	body character varying NOT NULL,
 	CONSTRAINT pk_serveys PRIMARY KEY (id) 
 	)

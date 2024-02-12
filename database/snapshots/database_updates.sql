@@ -8,11 +8,11 @@ CREATE TABLE public.database_updates(
 	deleted_date timestamp without time zone NULL,
 	id integer NOT NULL DEFAULT nextval('database_updates_id_seq'::regclass),
 	id_dbupdate_status integer NOT NULL,
-	execution_date timestamp without time zone NULL,
+	script_name character varying NOT NULL,
 	script_sql character varying NOT NULL,
 	script_results character varying NULL,
+	execution_date timestamp without time zone NULL,
 	description character varying NULL,
-	script_name character varying NOT NULL,
 	CONSTRAINT pk_database_updates PRIMARY KEY (id),
 	CONSTRAINT fk_database_updates_statuses FOREIGN KEY (id_dbupdate_status) REFERENCES public.database_update_statuses (id) 
 	)
