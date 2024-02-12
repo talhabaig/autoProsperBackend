@@ -55,6 +55,24 @@ export class Helper {
     }
   }
 
+  public static async beginTransactionWithoutUser(pool: PGPool) {
+    const sql = 'BEGIN'
+    try {
+      return await pool.aqueryWithoutUser( sql, [])
+    } catch (error) {
+      throw error
+    }
+  }
+
+  public static async commitTransactionWithoutUser(pool: PGPool) {
+    const sql = 'COMMIT'
+    try {
+      return await pool.aqueryWithoutUser(sql, [])
+    } catch (error) {
+      throw error
+    }
+  }
+
   public static async commitTransaction(pool: PGPool, cUser: any) {
     const sql = 'COMMIT'
     try {

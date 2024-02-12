@@ -83,6 +83,19 @@ export default class PGPool {
     }
   }
 
+  async aqueryWithoutUser(sqlText: string, params: any[] = []): Promise<pg.QueryResult<any>> {
+    const client = await this.pool.connect()
+    try {
+      const result = await client.query(sqlText, params)
+
+      return result
+    } catch (e) {
+      throw e
+    } finally {
+      client.release()
+    }
+  }
+
   /**
    * Create a client using one of the pooled connections
    *

@@ -123,6 +123,44 @@ components:
             type: "number"
           displayName:
             type: "string"
+    GuestUserServey:
+      type: "object"
+      properties:
+        guestUser:
+          type: "object"
+          properties:
+            first_name:
+              type: "string"
+            last_name:
+              type: "string"
+            date_of_birth:
+              type: "string"
+            city:
+              type: "string"
+            state:
+              type: "string"
+            last_4_digits_ssn:
+              type: "string"
+            phone:
+              type: "string"
+            monthly_income:
+              type: "integer"
+        servey:
+          type: "array"
+          items:
+            type: "object"
+            properties:
+              enumname:
+                type: "string"
+              enumvalues:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    id:
+                      type: "number"
+                    value:
+                      type: "string"
     roles:
       type: "array"
       items:
@@ -542,6 +580,69 @@ paths:
                           type: "number"
                         displayName:
                           type: "string"
+  /v0/servey/guest-user-servey:
+    post:
+      tags:
+        - "Servey"
+      summary: "Generate new Survey for Guest User"
+      requestBody:
+        description: "Guest User and Survey details"
+        required: true
+        content:
+          application/json:
+            schema:
+              type: "object"
+              properties:
+                guestUser:
+                  type: "object"
+                  properties:
+                    first_name:
+                      type: "string"
+                    last_name:
+                      type: "string"
+                    date_of_birth:
+                      type: "string"
+                    city:
+                      type: "string"
+                    state:
+                      type: "string"
+                    last_4_digits_ssn:
+                      type: "string"
+                    phone:
+                      type: "string"
+                    monthly_income:
+                      type: "integer"
+                servey:
+                  type: "array"
+                  items:
+                    type: "object"
+                    properties:
+                      enumname:
+                        type: "string"
+                      enumvalues:
+                        type: "array"
+                        items:
+                          type: "object"
+                          properties:
+                            id:
+                              type: "number"
+                            value:
+                              type: "string"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/user/roles:
     get:
       tags:

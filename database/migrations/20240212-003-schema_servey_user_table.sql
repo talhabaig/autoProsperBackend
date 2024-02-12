@@ -3,7 +3,7 @@
 /*==============================================================*/
 /* TABLE: guest_user                                          */
 /*==============================================================*/
-CREATE TABLE IF NOT EXISTS public.servery_users (
+CREATE TABLE IF NOT EXISTS public.servey_users (
     id SERIAL PRIMARY KEY,
     servey_id INTEGER NOT NULL REFERENCES public.servey(id),
     user_id INTEGER REFERENCES public.users(id),
@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS public.servery_users (
         CHECK ((user_id IS NOT NULL AND guest_user_id IS NULL) OR (user_id IS NULL AND guest_user_id IS NOT NULL))
 );
 
-ALTER TABLE IF EXISTS public.servery_users
+ALTER TABLE IF EXISTS public.servey_users
 OWNER TO postgres;
