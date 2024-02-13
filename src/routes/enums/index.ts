@@ -46,17 +46,20 @@ router.get('/essentials', (req, res) => wrapper(EnumController.GetEnum)("CarEsse
  *    - Enums
  *    summary: Get Enum for PrefferedCarBrand
  *    responses:
- *      '200':
- *        description: OK
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *              properties:
- *                success:
- *                  type: boolean
- *                data:
- *                  $ref: '#/components/schemas/enum'
+ *       '200':
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
  */
 router.get('/prefferedcarbrand', (req, res) => wrapper(EnumController.GetEnum)("PrefferedCarBrand", req, res));
 
@@ -68,17 +71,20 @@ router.get('/prefferedcarbrand', (req, res) => wrapper(EnumController.GetEnum)("
  *    - Enums
  *    summary: Get Enum for PrefferedSeats
  *    responses:
- *      '200':
- *        description: OK
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *              properties:
- *                success:
- *                  type: boolean
- *                data:
- *                  $ref: '#/components/schemas/enum'
+ *       '200':
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
  */
 router.get('/prefferedseats', (req, res) => wrapper(EnumController.GetEnum)("PrefferedSeats", req, res));
 
@@ -90,17 +96,20 @@ router.get('/prefferedseats', (req, res) => wrapper(EnumController.GetEnum)("Pre
  *    - Enums
  *    summary: Get Enum for PrefferedVehicle
  *    responses:
- *      '200':
- *        description: OK
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *              properties:
- *                success:
- *                  type: boolean
- *                data:
- *                  $ref: '#/components/schemas/enum'
+ *       '200':
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
  */
 router.get('/prefferedvehicle', (req, res) => wrapper(EnumController.GetEnum)("PrefferedVehicle", req, res));
 
@@ -112,17 +121,20 @@ router.get('/prefferedvehicle', (req, res) => wrapper(EnumController.GetEnum)("P
  *    - Enums
  *    summary: Get Enum for PrefferedRidePower
  *    responses:
- *      '200':
- *        description: OK
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *              properties:
- *                success:
- *                  type: boolean
- *                data:
- *                  $ref: '#/components/schemas/enum'
+ *       '200':
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
  */
 router.get('/prefferedridepower', (req, res) => wrapper(EnumController.GetEnum)("PrefferedRidePower", req, res));
 
