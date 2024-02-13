@@ -19,6 +19,6 @@ export class EnumController {
     
         const response: ResponseWrapper = new ResponseWrapper(res);
     
-        return response.ok({ success: true, data: { result } });
+        return response.ok({ success: true, data: { enum: param, values: result } });
     }
 }

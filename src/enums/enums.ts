@@ -1,11 +1,11 @@
 export enum CarEssentialCriteria {
-    GoodGasMileage = 1,
-    InteriorCargoSpace = 2,
-    PerformanceAndHandling = 3,
-    FeaturesAndAccessories = 4,
-    InteriorStyle = 5,
-    PassengerSpace = 6,
-  }
+  GoodGasMileage = 1,
+  InteriorCargoSpace = 2,
+  PerformanceAndHandling = 3,
+  FeaturesAndAccessories = 4,
+  InteriorStyle = 5,
+  PassengerSpace = 6,
+}
 
 export enum PrefferedCarBrand {
   Honda = 1,

@@ -11,6 +11,8 @@
 *           properties:
 *             first_name:
 *               type: string
+*             middle_name:
+*               type: string
 *             last_name:
 *               type: string
 *             date_of_birth:

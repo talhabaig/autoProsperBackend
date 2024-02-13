@@ -21,17 +21,20 @@ const router = express.Router()
  *    - Enums
  *    summary: Get Enum for CarEssentialCriteria
  *    responses:
- *      '200':
- *        description: OK
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *              properties:
- *                success:
- *                  type: boolean
- *                data:
- *                  $ref: '#/components/schemas/enum'
+ *       '200':
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
  */
 router.get('/essentials', (req, res) => wrapper(EnumController.GetEnum)("CarEssentialCriteria", req, res));
 

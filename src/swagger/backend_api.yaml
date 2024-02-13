@@ -131,6 +131,8 @@ components:
           properties:
             first_name:
               type: "string"
+            middle_name:
+              type: "string"
             last_name:
               type: "string"
             date_of_birth:
@@ -476,14 +478,10 @@ paths:
                   success:
                     type: "boolean"
                   data:
-                    type: "array"
-                    items:
-                      type: "object"
-                      properties:
-                        value:
-                          type: "number"
-                        displayName:
-                          type: "string"
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/enums/prefferedcarbrand:
     get:
       tags:
@@ -597,6 +595,8 @@ paths:
                   type: "object"
                   properties:
                     first_name:
+                      type: "string"
+                    middle_name:
                       type: "string"
                     last_name:
                       type: "string"
