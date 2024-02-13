@@ -4,7 +4,11 @@
  * @application 016-n-3020_impact_api
  *     @summary Application routes
  * @description Handles following routes:
- *              - GET '/version'
+ *              - GET '/essentials'
+ *              - GET '/prefferedcarbrand'
+ *              - GET '/prefferedseats'
+ *              - GET '/prefferedvehicle'
+ *              - GET '/prefferedridepower'
  */
 import express from 'express'
 
