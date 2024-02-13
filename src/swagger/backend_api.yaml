@@ -114,15 +114,6 @@ components:
           type: "boolean"
         is_operator_alert_monitor:
           type: "boolean"
-    enum:
-      type: "array"
-      items:
-        type: "object"
-        properties:
-          value:
-            type: "number"
-          displayName:
-            type: "string"
     GuestUserServey:
       type: "object"
       properties:
@@ -498,14 +489,10 @@ paths:
                   success:
                     type: "boolean"
                   data:
-                    type: "array"
-                    items:
-                      type: "object"
-                      properties:
-                        value:
-                          type: "number"
-                        displayName:
-                          type: "string"
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/enums/prefferedseats:
     get:
       tags:
@@ -522,14 +509,10 @@ paths:
                   success:
                     type: "boolean"
                   data:
-                    type: "array"
-                    items:
-                      type: "object"
-                      properties:
-                        value:
-                          type: "number"
-                        displayName:
-                          type: "string"
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/enums/prefferedvehicle:
     get:
       tags:
@@ -546,14 +529,10 @@ paths:
                   success:
                     type: "boolean"
                   data:
-                    type: "array"
-                    items:
-                      type: "object"
-                      properties:
-                        value:
-                          type: "number"
-                        displayName:
-                          type: "string"
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/enums/prefferedridepower:
     get:
       tags:
@@ -570,14 +549,10 @@ paths:
                   success:
                     type: "boolean"
                   data:
-                    type: "array"
-                    items:
-                      type: "object"
-                      properties:
-                        value:
-                          type: "number"
-                        displayName:
-                          type: "string"
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/servey/guest-user-servey:
     post:
       tags:
