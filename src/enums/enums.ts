@@ -17,14 +17,14 @@ export enum PrefferedCarBrand {
   Audi = 7,
   Mercedes = 8,
   Nissan = 9,
-  Mazda = 10
+  Mazda = 10,
 }
 
 export enum PrefferedSeats {
   TwoSeats = 1,
   ThreeToFive = 2,
   SixToEight = 3,
-  EightPlus = 4
+  EightPlus = 4,
 }
 
 export enum PrefferedVehicle {
@@ -35,12 +35,12 @@ export enum PrefferedVehicle {
   Coupe = 5,
   Wagon = 6,
   Minivan = 7,
-  Convertible = 8
+  Convertible = 8,
 }
 
 export enum PrefferedRidePower {
   GasDiesel = 1,
   Hybrid = 2,
   PlugInHybrid = 3,
-  Electric = 4
+  Electric = 4,
 }

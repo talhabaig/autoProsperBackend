@@ -32,8 +32,7 @@ export default class PGPool {
   pool: pg.Pool
 
   constructor(dbConfig: pg.PoolConfig) {
-    if(Boolean(process.env.DB_LOCALHOST))
-    {
+    if (Boolean(process.env.DB_LOCALHOST)) {
       dbConfig.ssl = false
     }
 

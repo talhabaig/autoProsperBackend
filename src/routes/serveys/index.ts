@@ -11,7 +11,7 @@ import { wrapper } from '../../helpers'
 import Schema from '../../middlewares/schema'
 import ServeyValidator from '../../validators/servey'
 import { ServeyController } from '../../controllers'
- 
+
 const router = express.Router()
 
 /**
@@ -45,13 +45,12 @@ const router = express.Router()
  *                       type: string
  */
 router.post(
-    '/guest-user-servey',
-    // @ts-ignore
-    (req, res, next) => {
-      Schema.handle(req, res, next, ServeyValidator.GuestUserServey())
-    },
-    wrapper(ServeyController.createGuestUserServey),
-  )
+  '/guest-user-servey',
+  // @ts-ignore
+  (req, res, next) => {
+    Schema.handle(req, res, next, ServeyValidator.GuestUserServey())
+  },
+  wrapper(ServeyController.createGuestUserServey),
+)
 
-  
 export default router

@@ -195,7 +195,7 @@ export class UserService extends CommonService {
     password = '',
     is_whomai = false,
     is_authenticate_without_password = false,
-  ) { 
+  ) {
     const pool = Helper.pool()
     const cUser = Helper.defaultUser()
     try {
@@ -213,7 +213,7 @@ export class UserService extends CommonService {
         sql += `AND hashpass=crypt($2, hashpass)`
         params = [username, password]
       }
- 
+
       const query_results = await pool.aquery(cUser, sql, params)
       const rowCount = query_results?.rowCount ?? 0
 

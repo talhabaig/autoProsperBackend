@@ -58,7 +58,7 @@ export class Helper {
   public static async beginTransactionWithoutUser(pool: PGPool) {
     const sql = 'BEGIN'
     try {
-      return await pool.aqueryWithoutUser( sql, [])
+      return await pool.aqueryWithoutUser(sql, [])
     } catch (error) {
       throw error
     }

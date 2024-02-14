@@ -6,14 +6,14 @@
  * @description Defines the structure for servey model
  */
 
-import Helper from '../db_pool/helper';
+import Helper from '../db_pool/helper'
 
 export class Servey {
-  public body: Record<string, any>;
+  public body: Record<string, any>
 
   constructor(model?: any) {
     if (model) {
-      Helper.shallowCopy(model, this);
+      Helper.shallowCopy(model, this)
     }
   }
 }

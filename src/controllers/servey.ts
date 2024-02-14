@@ -6,7 +6,7 @@
  *   @functions - createGuestUserServey()
  *     @returns Express JSON Response
  */
- 
+
 import { ServeyService } from '../services'
 import { Response, Request, NextFunction } from 'express'
 import { ResponseWrapper } from '../helpers/response_wrapper'
@@ -18,8 +18,7 @@ export class ServeyController {
 
     const result = await ServeyService.createGuestUserServey(guestUser, servey)
     const response: ResponseWrapper = new ResponseWrapper(res)
- 
+
     return response.created(result)
   }
- 
 }

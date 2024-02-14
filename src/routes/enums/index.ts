@@ -13,7 +13,7 @@
 import express from 'express'
 
 import { wrapper } from '../../helpers'
-import { EnumController  } from '../../controllers'
+import { EnumController } from '../../controllers'
 
 const router = express.Router()
 
@@ -40,7 +40,7 @@ const router = express.Router()
  *                     message:
  *                       type: string
  */
-router.get('/essentials', (req, res) => wrapper(EnumController.GetEnum)("CarEssentialCriteria", req, res));
+router.get('/essentials', (req, res) => wrapper(EnumController.GetEnum)('CarEssentialCriteria', req, res))
 
 /**
  * @openapi
@@ -65,7 +65,7 @@ router.get('/essentials', (req, res) => wrapper(EnumController.GetEnum)("CarEsse
  *                     message:
  *                       type: string
  */
-router.get('/prefferedcarbrand', (req, res) => wrapper(EnumController.GetEnum)("PrefferedCarBrand", req, res));
+router.get('/prefferedcarbrand', (req, res) => wrapper(EnumController.GetEnum)('PrefferedCarBrand', req, res))
 
 /**
  * @openapi
@@ -90,7 +90,7 @@ router.get('/prefferedcarbrand', (req, res) => wrapper(EnumController.GetEnum)("
  *                     message:
  *                       type: string
  */
-router.get('/prefferedseats', (req, res) => wrapper(EnumController.GetEnum)("PrefferedSeats", req, res));
+router.get('/prefferedseats', (req, res) => wrapper(EnumController.GetEnum)('PrefferedSeats', req, res))
 
 /**
  * @openapi
@@ -115,7 +115,7 @@ router.get('/prefferedseats', (req, res) => wrapper(EnumController.GetEnum)("Pre
  *                     message:
  *                       type: string
  */
-router.get('/prefferedvehicle', (req, res) => wrapper(EnumController.GetEnum)("PrefferedVehicle", req, res));
+router.get('/prefferedvehicle', (req, res) => wrapper(EnumController.GetEnum)('PrefferedVehicle', req, res))
 
 /**
  * @openapi
@@ -140,6 +140,6 @@ router.get('/prefferedvehicle', (req, res) => wrapper(EnumController.GetEnum)("P
  *                     message:
  *                       type: string
  */
-router.get('/prefferedridepower', (req, res) => wrapper(EnumController.GetEnum)("PrefferedRidePower", req, res));
+router.get('/prefferedridepower', (req, res) => wrapper(EnumController.GetEnum)('PrefferedRidePower', req, res))
 
 export default router

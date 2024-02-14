@@ -10,7 +10,7 @@ import { GuestUser, Servey } from '../models'
 import PGPool from '../db_pool/pg_pool'
 import { CommonService } from '../services'
 import { logger } from '../providers/logger'
-import messages from '../constants' 
+import messages from '../constants'
 
 export class ServeyService extends CommonService {
   expReq?: any
@@ -31,7 +31,7 @@ export class ServeyService extends CommonService {
       // begin transaction
       await Helper.beginTransactionWithoutUser(pool)
     }
- 
+
     try {
       // insert guest user row
       const guest_user_query = `INSERT INTO guest_user (first_name, middle_name, last_name, date_of_birth, city, state, phone, last_4_digits_ssn, monthly_income)
@@ -49,7 +49,7 @@ export class ServeyService extends CommonService {
       // insert servey user
       const servery_user_query = `INSERT INTO servey_users (servey_id, guest_user_id) VALUES ($1, $2) returning id`
       const servey_user_params = [guestUserResult.rows[0].id, serveyResult.rows[0].id]
-      
+
       const serveyUserResult = await pool.aqueryWithoutUser(servery_user_query, servey_user_params)
 
       // commit if there is a transaction
