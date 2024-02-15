@@ -453,6 +453,32 @@ paths:
                                 type: "boolean"
                               is_operator_alert_monitor:
                                 type: "boolean"
+  /v0/customisecar/models-by-brand/{brand}:
+    get:
+      tags:
+        - "CustomiseCar"
+      summary: "Get car models based on brand"
+      parameters:
+        - schema:
+            type: "string"
+          required: true
+          in: "path"
+          name: "brand"
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  success:
+                    type: "boolean"
+                  data:
+                    type: "object"
+                    properties:
+                      message:
+                        type: "string"
   /v0/enums/essentials:
     get:
       tags:
