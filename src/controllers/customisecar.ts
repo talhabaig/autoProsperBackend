@@ -12,11 +12,10 @@ import { OpenAIService} from '../services'
 import { CUserAuthInfoRequest } from '../db_pool/helper'
 import { ResponseWrapper } from '../helpers/response_wrapper'
 
-
 export class CustomiseCarController {
-    public static async GetModelByBrand(_req: CUserAuthInfoRequest, res: Response) {
-      var param = _req.params.brand
-      const response: ResponseWrapper = new ResponseWrapper(res)
-      return response.ok({ success: true, data: await OpenAIService.getCarModelsBasedOnBrand(param) })
-    }
+  public static async GetModelByBrand(_req: CUserAuthInfoRequest, res: Response) {
+    var param = _req.params.brand
+    const response: ResponseWrapper = new ResponseWrapper(res)
+    return response.ok({ success: true, data: await OpenAIService.getCarModelsBasedOnBrand(param) })
   }
+}

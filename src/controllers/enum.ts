@@ -15,9 +15,7 @@ import { ResponseWrapper } from '../helpers/response_wrapper'
 export class EnumController {
   public static async GetEnum(param: string, _req: CUserAuthInfoRequest, res: Response) {
     var result = await EnumService.getEnumInfo(param)
-
     const response: ResponseWrapper = new ResponseWrapper(res)
-
     return response.ok({ success: true, data: { enum: param, values: result } })
   }
 }
